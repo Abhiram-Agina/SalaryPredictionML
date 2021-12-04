@@ -26,7 +26,13 @@ if nav == "Home":
     st.pyplot()
         
 if nav == "Prediction":
-    pass
+    st.header("Know Your Salary")
+    val = st.number_input("Enter Your Exp.", 0.00, 20.00, step = 0.50)
+    val = np.array(val).reshape(1, -1)
+    pred = lr.predict(val)[0]
+    
+    if(st.button("Predict")):
+        st.success(f"Your Predicted Salary: {round(pred)}")
 
 if nav == "Contribute":
     pass
