@@ -17,6 +17,14 @@ if nav == "Home":
     if st.checkbox("Show Table"):
         st.table(data)
         
+    plt.figure(figsize = (10, 5))
+    plt.scatter(data["YearsExperience"], data["Salary"])
+    plt.ylim(0)
+    plt.xlabel("Years Of Experience")
+    plt.ylabel("Salary")
+    plt.tight_layout()
+    st.pyplot()
+        
 if nav == "Prediction":
     pass
 
