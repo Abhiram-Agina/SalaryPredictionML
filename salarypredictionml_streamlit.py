@@ -35,4 +35,11 @@ if nav == "Prediction":
         st.success(f"Your Predicted Salary: {round(pred)}")
 
 if nav == "Contribute":
-    pass
+    st.header("Contribute to our dataset")
+    ex = st.number_input("Enter your Experience", 0.0, 20.0)
+    sal = st.number_input("Enter your Salary", 0.000, 1000000.00, step = 1000.0)
+    if(st.button("Submit")):
+        to_add = {"YearsExperience":[ex], "Salary":[sal]}
+        to_add = pd.DataFrame(to_add)
+        to_add.to_csv("data//Salary_Data.csv", mode = 'a', header = False, index = False)
+        st.success("Submitted")
