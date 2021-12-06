@@ -24,7 +24,7 @@ if nav == "Home":
     plt.ylabel("Salary")
     plt.tight_layout()
 
-    plt.plot(x, lr.predict(x),color='k')
+    plt.plot(x, lr.predict(x),color='r')
     st.pyplot()
         
 if nav == "Prediction":
