@@ -18,11 +18,13 @@ if nav == "Home":
         st.table(data)
         
     plt.figure(figsize = (10, 5))
-    plt.scatter(data["YearsExperience"], data["Salary"])
+    plt.scatter(data["YearsExperience"], data["Salary"], color='g')
     plt.ylim(0)
     plt.xlabel("Years Of Experience")
     plt.ylabel("Salary")
     plt.tight_layout()
+
+    plt.plot(x, lr.predict(x),color='k')
     st.pyplot()
         
 if nav == "Prediction":
