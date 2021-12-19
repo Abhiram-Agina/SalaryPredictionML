@@ -22,6 +22,7 @@ if nav == "Home":
     plt.ylim(0)
     plt.xlabel("Years Of Experience")
     plt.ylabel("Salary")
+    plt.title("Relation between Years of Exp. and Yearly Salary")
     plt.tight_layout()
 
     plt.plot(x, lr.predict(x),color='r')
